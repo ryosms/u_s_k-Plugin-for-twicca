@@ -1,0 +1,15 @@
+# R.javaを無視
+R.java
+
+# bin配下を無視
+*.dex
+*.apk
+*.ap_
+*.class
+
+# Thumbs.dbを無視
+Thumbs.db
+
+# .DS_Storeを無視
+.DS_Store
+
