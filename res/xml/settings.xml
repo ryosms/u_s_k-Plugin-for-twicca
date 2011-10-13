@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+      android:key="use_usk"
+      android:title="#u_s_k"
+      android:defaultValue="true"
+      />
+    <CheckBoxPreference 
+      android:key="use_sekitoba"
+      android:title="#sekitoba"
+      android:defaultValue="true"
+      />
+    <CheckBoxPreference 
+      android:key="use_hidaka"
+      android:title="羊さん"
+      android:defaultValue="true"
+      />
+</PreferenceScreen>

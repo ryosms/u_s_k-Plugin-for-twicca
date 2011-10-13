@@ -13,6 +13,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".SettingPreference"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="jp.r246.twicca.ACTION_PLUGIN_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest>
