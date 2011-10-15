@@ -2,18 +2,30 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
     <CheckBoxPreference
-      android:key="use_usk"
-      android:title="#u_s_k"
+      android:key="@string/key_use_usk"
+      android:title="@string/title_use_usk"
       android:defaultValue="true"
       />
     <CheckBoxPreference 
-      android:key="use_sekitoba"
-      android:title="#sekitoba"
+      android:key="@string/key_use_sekitoba"
+      android:title="@string/title_use_sekitoba"
       android:defaultValue="true"
       />
     <CheckBoxPreference 
-      android:key="use_hidaka"
-      android:title="羊さん"
+      android:key="@string/key_use_hidaka"
+      android:title="@string/title_use_hidaka"
+      android:defaultValue="true"
+      />
+    
+    <CheckBoxPreference 
+      android:key="@string/key_use_kakenavi"
+      android:title="@string/title_use_kakenavi"
+      android:defaultValue="true"
+      />
+    
+    <CheckBoxPreference
+      android:key="@string/key_use_miguse"
+      android:title="@string/title_use_miguse"
       android:defaultValue="true"
       />
 </PreferenceScreen>

@@ -14,6 +14,14 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 public class UskPluginActivity extends Activity {
+	private static final int[][] PREFERENCE_KEYS = {
+		{R.string.key_use_usk, R.string.hash_usk}
+		, {R.string.key_use_sekitoba, R.string.hash_sekitoba}
+		, {R.string.key_use_hidaka, R.string.hash_hidaka}
+		, {R.string.key_use_kakenavi, R.string.hash_kakenavi}
+		, {R.string.key_use_miguse, R.string.hash_miguse}
+	};
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +29,10 @@ public class UskPluginActivity extends Activity {
         
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         ArrayList<String> items = new ArrayList<String>();
-        if(pref.getBoolean("use_usk", true)) items.add("#u_s_k");
-        if(pref.getBoolean("use_sekitoba", true)) items.add("#sekitoba");
-        if(pref.getBoolean("use_hidaka", true)) items.add("#ひだか");
+        for(int i = 0; i < PREFERENCE_KEYS.length; i++) {
+        	if(pref.getBoolean(getString(PREFERENCE_KEYS[i][0]), true))
+        		items.add(getString(PREFERENCE_KEYS[i][1]));
+        }
         if(items.size() == 0) {
         	Toast.makeText(this, "no options. plz check settings", Toast.LENGTH_SHORT).show();
         	this.finish();
