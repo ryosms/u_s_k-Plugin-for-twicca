@@ -22,12 +22,26 @@ public class UskPluginActivity extends Activity {
 		, {R.string.key_use_miguse, R.string.hash_miguse}
 	};
 	
+	private String tweet;
+	private String screenName;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        Intent intent = getIntent();
+        tweet = intent.getStringExtra(Intent.EXTRA_TEXT);
+        screenName = intent.getStringExtra("user_screen_name");
+        
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        
+        if(pref.getBoolean(getString(R.string.key_force_sekitoba), false)
+        		&& screenName.equals("sekitoba")) {
+        	goTweet(getString(R.string.hash_sekitoba));
+        	return;
+        }
+        
         ArrayList<String> items = new ArrayList<String>();
         for(int i = 0; i < PREFERENCE_KEYS.length; i++) {
         	if(pref.getBoolean(getString(PREFERENCE_KEYS[i][0]), true))
@@ -51,10 +65,6 @@ public class UskPluginActivity extends Activity {
     }
     
     private void goTweet(String prefix) {
-        Intent intent = getIntent();
-        String tweet = intent.getStringExtra(Intent.EXTRA_TEXT);
-        String screenName = intent.getStringExtra("user_screen_name");
-
         Intent twicca = new Intent();
         twicca.setClassName("jp.r246.twicca", "jp.r246.twicca.statuses.Send");
         twicca.setAction(Intent.ACTION_SEND);
