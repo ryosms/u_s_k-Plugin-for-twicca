@@ -26,7 +26,7 @@
         <receiver android:name=".HiddenReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
-                <data android:scheme="android_secret_code" android:host="459338" />
+                <data android:scheme="android_secret_code" android:host="0519" />
             </intent-filter>
         </receiver>
 
