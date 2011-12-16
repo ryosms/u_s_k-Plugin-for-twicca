@@ -1,15 +1,40 @@
-# R.javaを無視
-R.java
-
-# bin配下を無視
-*.dex
+# built application files
 *.apk
 *.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
 *.class
 
-# Thumbs.dbを無視
-Thumbs.db
+# generated files
+bin/
+gen/
 
-# .DS_Storeを無視
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Thumbs.db or .DS_Store
+Thumbs.db
 .DS_Store
+
+# Eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*(J~(B.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# CDT-specific
+.cproject
 
