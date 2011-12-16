@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -60,6 +61,11 @@ public class UskPluginActivity extends Activity {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				goTweet(selections[which].toString());
+			}
+		}).setOnCancelListener(new OnCancelListener() {
+			@Override
+			public void onCancel(DialogInterface dialog) {
+				UskPluginActivity.this.finish();
 			}
 		}).show();
     }
