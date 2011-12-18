@@ -36,6 +36,9 @@
     <string name="key_use_qt_usk">use_qt_usk</string>
     <string name="title_use_qt_usk">ツイートにin_reply_toを付ける</string>
     <string name="summary_use_qt_usk">先頭のメンションはご自身で削除願います</string>
+    <string name="key_use_mizuki">use_i705</string>
+    <string name="title_use_mizuki">みずきさんは俺の嫁！</string>
+    <string name="hash_mizuki">#みずきさんかわいい</string>
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
 

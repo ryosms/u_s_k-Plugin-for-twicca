@@ -19,7 +19,8 @@ public abstract class UskPluginActivity extends Activity {
 			{ R.string.key_use_sekitoba, R.string.hash_sekitoba },
 			{ R.string.key_use_hidaka, R.string.hash_hidaka },
 			{ R.string.key_use_kakenavi, R.string.hash_kakenavi },
-			{ R.string.key_use_miguse, R.string.hash_miguse } };
+			{ R.string.key_use_miguse, R.string.hash_miguse },
+			{ R.string.key_use_mizuki, R.string.hash_mizuki } };
 
 	private String tweet;
 	private String screenName;
@@ -45,7 +46,7 @@ public abstract class UskPluginActivity extends Activity {
 
 		ArrayList<String> items = new ArrayList<String>();
 		for (int i = 0; i < PREFERENCE_KEYS.length; i++) {
-			if (pref.getBoolean(getString(PREFERENCE_KEYS[i][0]), true))
+			if (pref.getBoolean(getString(PREFERENCE_KEYS[i][0]), false))
 				items.add(getString(PREFERENCE_KEYS[i][1]));
 		}
 		if (items.size() == 0) {

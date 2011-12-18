@@ -15,6 +15,7 @@ public class HiddenSettingActivity extends Activity implements OnClickListener {
 	private SharedPreferences pref;
 	private CheckBox chkSekitoba;
 	private CheckBox chkUseQtUsk;
+	private CheckBox chkUseMizuki;
 	private boolean useQtUks;
 
 	@Override
@@ -29,6 +30,13 @@ public class HiddenSettingActivity extends Activity implements OnClickListener {
 			chkSekitoba.setChecked(true);
 		} else {
 			chkSekitoba.setChecked(false);
+		}
+
+		chkUseMizuki = (CheckBox) findViewById(R.id.chkMizuki);
+		if (pref.getBoolean(getString(R.string.key_use_mizuki), false)) {
+			chkUseMizuki.setChecked(true);
+		} else {
+			chkUseMizuki.setChecked(false);
 		}
 
 		chkUseQtUsk = (CheckBox) findViewById(R.id.chkUseQtUsk);
@@ -59,6 +67,8 @@ public class HiddenSettingActivity extends Activity implements OnClickListener {
 		Editor editor = pref.edit();
 		editor.putBoolean(getString(R.string.key_force_sekitoba),
 				chkSekitoba.isChecked());
+		editor.putBoolean(getString(R.string.key_use_mizuki),
+				chkUseMizuki.isChecked());
 		boolean useQt = chkUseQtUsk.isChecked();
 		editor.putBoolean(getString(R.string.key_use_qt_usk), useQt);
 		editor.commit();
