@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">u_s_k</string>
+    <string name="rt_usk">引用u_s_k</string>
+    <string name="qt_usk">返信u_s_k</string>
     
     <string name="key_use_usk">use_usk</string>
     <string name="title_use_usk">#u_s_k</string>
