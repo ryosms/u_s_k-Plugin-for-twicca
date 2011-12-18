@@ -8,7 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 public class UskReplyActivity extends UskPluginActivity {
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super._self = this;
@@ -19,17 +19,18 @@ public class UskReplyActivity extends UskPluginActivity {
 	protected void startIntent(String extraText) {
 		Intent myIntent = getIntent();
 		String id = myIntent.getStringExtra("id");
-		
-		String url = String.format("https://twitter.com/intent/tweet?text=%s&in_reply_to=%s"
-									, URLEncoder.encode(extraText), id);
+
+		String url = String.format(
+				"https://twitter.com/intent/tweet?text=%s&in_reply_to=%s",
+				URLEncoder.encode(extraText), id);
 		Uri uri = Uri.parse(url);
-		
+
 		Intent intent = new Intent();
 		intent.setAction(Intent.ACTION_VIEW);
 		intent.setData(uri);
 		try {
 			this.startActivity(intent);
-		} catch(ActivityNotFoundException e) {
+		} catch (ActivityNotFoundException e) {
 		}
 		this.finish();
 	}

@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:enabled="false"
             android:label="@string/qt_usk"
             android:name=".UskReplyActivity"
-            android:enabled="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
             <intent-filter >
                 <action android:name="jp.r246.twicca.ACTION_SHOW_TWEET" />

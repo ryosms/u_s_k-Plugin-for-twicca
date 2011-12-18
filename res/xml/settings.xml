@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
     <CheckBoxPreference
-      android:key="@string/key_use_usk"
-      android:title="@string/title_use_usk"
-      android:defaultValue="true"
-      />
-    <CheckBoxPreference 
-      android:key="@string/key_use_sekitoba"
-      android:title="@string/title_use_sekitoba"
-      android:defaultValue="true"
-      />
-    <CheckBoxPreference 
-      android:key="@string/key_use_hidaka"
-      android:title="@string/title_use_hidaka"
-      android:defaultValue="true"
-      />
-    
-    <CheckBoxPreference 
-      android:key="@string/key_use_kakenavi"
-      android:title="@string/title_use_kakenavi"
-      android:defaultValue="true"
-      />
-    
+        android:defaultValue="true"
+        android:key="@string/key_use_usk"
+        android:title="@string/title_use_usk" />
+
     <CheckBoxPreference
-      android:key="@string/key_use_miguse"
-      android:title="@string/title_use_miguse"
-      android:defaultValue="true"
-      />
+        android:defaultValue="true"
+        android:key="@string/key_use_sekitoba"
+        android:title="@string/title_use_sekitoba" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/key_use_hidaka"
+        android:title="@string/title_use_hidaka" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/key_use_kakenavi"
+        android:title="@string/title_use_kakenavi" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/key_use_miguse"
+        android:title="@string/title_use_miguse" />
+
 </PreferenceScreen>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- アプリ名 -->
     <string name="app_name">u_s_k</string>
     <string name="rt_usk">引用u_s_k</string>
@@ -37,4 +38,5 @@
     <string name="summary_use_qt_usk">先頭のメンションはご自身で削除願います</string>
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
+
 </resources>
