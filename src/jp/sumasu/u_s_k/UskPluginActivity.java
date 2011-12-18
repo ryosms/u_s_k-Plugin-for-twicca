@@ -21,6 +21,10 @@ public abstract class UskPluginActivity extends Activity {
 			{ R.string.key_use_kakenavi, R.string.hash_kakenavi },
 			{ R.string.key_use_miguse, R.string.hash_miguse },
 			{ R.string.key_use_mizuki, R.string.hash_mizuki } };
+	private static final int[] PREFERENCE_TITLE = { R.string.title_use_usk,
+			R.string.title_use_sekitoba, R.string.title_use_hidaka,
+			R.string.title_use_kakenavi, R.string.title_use_miguse,
+			R.string.title_use_mizuki };
 
 	private String tweet;
 	private String screenName;
@@ -45,9 +49,12 @@ public abstract class UskPluginActivity extends Activity {
 		}
 
 		ArrayList<String> items = new ArrayList<String>();
+		ArrayList<String> titles = new ArrayList<String>();
 		for (int i = 0; i < PREFERENCE_KEYS.length; i++) {
-			if (pref.getBoolean(getString(PREFERENCE_KEYS[i][0]), false))
+			if (pref.getBoolean(getString(PREFERENCE_KEYS[i][0]), false)) {
 				items.add(getString(PREFERENCE_KEYS[i][1]));
+				titles.add(getString(PREFERENCE_TITLE[i]));
+			}
 		}
 		if (items.size() == 0) {
 			Toast.makeText(this, "no options. plz check settings",
@@ -59,8 +66,9 @@ public abstract class UskPluginActivity extends Activity {
 			return;
 		}
 		final String[] selections = (String[]) items.toArray(new String[0]);
+		final String[] titleList = (String[]) titles.toArray(new String[0]);
 		new AlertDialog.Builder(this).setTitle("")
-				.setItems(selections, new OnClickListener() {
+				.setItems(titleList, new OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						goTweet(selections[which].toString());
