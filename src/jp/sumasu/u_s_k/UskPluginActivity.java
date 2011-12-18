@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
@@ -14,7 +13,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
-public class UskPluginActivity extends Activity {
+public abstract class UskPluginActivity extends Activity {
 	private static final int[][] PREFERENCE_KEYS = {
 		{R.string.key_use_usk, R.string.hash_usk}
 		, {R.string.key_use_sekitoba, R.string.hash_sekitoba}
@@ -25,6 +24,7 @@ public class UskPluginActivity extends Activity {
 	
 	private String tweet;
 	private String screenName;
+	protected Activity _self;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class UskPluginActivity extends Activity {
         }
         if(items.size() == 0) {
         	Toast.makeText(this, "no options. plz check settings", Toast.LENGTH_SHORT).show();
-        	this.finish();
+        	_self.finish();
         	return;
         } else if(items.size() == 1) {
         	goTweet(items.get(0));
@@ -65,22 +65,16 @@ public class UskPluginActivity extends Activity {
 		}).setOnCancelListener(new OnCancelListener() {
 			@Override
 			public void onCancel(DialogInterface dialog) {
-				UskPluginActivity.this.finish();
+				_self.finish();
 			}
 		}).show();
     }
     
     private void goTweet(String prefix) {
-        Intent twicca = new Intent();
-        twicca.setClassName("jp.r246.twicca", "jp.r246.twicca.statuses.Send");
-        twicca.setAction(Intent.ACTION_SEND);
-        twicca.putExtra(Intent.EXTRA_TEXT, String.format("%s RT @%s: %s", prefix, screenName, tweet));
-        try {
-        	this.startActivity(twicca);
-        } catch(ActivityNotFoundException e) {
-        	e.printStackTrace();
-        	Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show();
-        }
-        this.finish();
+    	String extraText = String.format("%s RT @%s: %s", prefix, screenName, tweet);
+    	startIntent(extraText);
     }
+    
+    protected abstract void startIntent(String extraText);
+    
 }

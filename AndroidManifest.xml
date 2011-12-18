@@ -6,7 +6,7 @@
     <uses-sdk android:minSdkVersion="4" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".UskPluginActivity"
+        <activity android:name=".UskRetweetActivity"
                   android:label="@string/app_name" android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="jp.r246.twicca.ACTION_SHOW_TWEET" />
