@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- アプリ名 -->
     <string name="app_name">u_s_k</string>
     <string name="rt_usk">引用u_s_k</string>
     <string name="qt_usk">返信u_s_k</string>
-    
+    <!-- #u_s_k -->
     <string name="key_use_usk">use_usk</string>
     <string name="title_use_usk">#u_s_k</string>
     <string name="hash_usk">@string/title_use_usk</string>
-
+    <!-- #sekitoba -->
     <string name="key_use_sekitoba">use_sekitoba</string>
     <string name="title_use_sekitoba">#sekitoba</string>
     <string name="hash_sekitoba">@string/title_use_sekitoba</string>
-
+    <!-- #ひだか -->
     <string name="key_use_hidaka">use_hidaka</string>
     <string name="title_use_hidaka">羊さん</string>
     <string name="hash_hidaka">#ひだか</string>
-
+    <!-- #kakenavi_blog -->
     <string name="key_use_kakenavi">use_kakenavi</string>
     <string name="title_use_kakenavi">#kakenavi_blog</string>
     <string name="hash_kakenavi">@string/title_use_kakenavi</string>
-
+    <!-- #miguse -->
     <string name="key_use_miguse">use_miguse</string>
     <string name="title_use_miguse">#miguse</string>
     <string name="hash_miguse">@string/title_use_miguse</string>
-
+    <!-- #uso800 -->
     <string name="key_use_uso800">use_uso800</string>
     <string name="title_use_uso800">#uso800</string>
     <string name="hash_uso800">@string/title_use_uso800</string>
-    
-
+    <!-- 隠し設定画面 -->
     <string name="key_force_sekitoba">force_sekitoba</string>
     <string name="title_force_sekitoba">sekitobaさんには強制で#sekitoba</string>
-    
+    <string name="hidden_test_mode">テスト中の機能</string>
+    <string name="key_use_qt_usk">use_qt_usk</string>
+    <string name="title_use_qt_usk">ツイートにin_reply_toを付ける</string>
+    <string name="summary_use_qt_usk">先頭のメンションはご自身で削除願います</string>
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
 </resources>
