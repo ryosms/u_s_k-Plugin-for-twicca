@@ -29,6 +29,10 @@
     <string name="key_use_uso800">use_uso800</string>
     <string name="title_use_uso800">#uso800</string>
     <string name="hash_uso800">@string/title_use_uso800</string>
+    <!-- #ハナキンスカイウォーカー -->
+    <string name="key_use_yusukey">use_yusukey</string>
+    <string name="title_use_yusukey">金曜の晩ですね</string>
+    <string name="hash_yusukey">#ハナキンスカイウォーカー</string>
     <!-- 隠し設定画面 -->
     <string name="key_force_sekitoba">force_sekitoba</string>
     <string name="title_force_sekitoba">sekitobaさんには強制で#sekitoba</string>

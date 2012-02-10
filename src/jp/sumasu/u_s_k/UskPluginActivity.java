@@ -20,11 +20,12 @@ public abstract class UskPluginActivity extends Activity {
 			{ R.string.key_use_hidaka, R.string.hash_hidaka },
 			{ R.string.key_use_kakenavi, R.string.hash_kakenavi },
 			{ R.string.key_use_miguse, R.string.hash_miguse },
-			{ R.string.key_use_mizuki, R.string.hash_mizuki } };
+			{ R.string.key_use_mizuki, R.string.hash_mizuki },
+			{ R.string.key_use_yusukey, R.string.hash_yusukey } };
 	private static final int[] PREFERENCE_TITLE = { R.string.title_use_usk,
 			R.string.title_use_sekitoba, R.string.title_use_hidaka,
 			R.string.title_use_kakenavi, R.string.title_use_miguse,
-			R.string.title_use_mizuki };
+			R.string.title_use_mizuki, R.string.title_use_yusukey };
 
 	private String tweet;
 	private String screenName;
