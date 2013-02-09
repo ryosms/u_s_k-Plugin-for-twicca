@@ -1,3 +1,4 @@
+# from Android.gitignore
 # built application files
 *.apk
 *.ap_
@@ -15,26 +16,31 @@ gen/
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Thumbs.db or .DS_Store
-Thumbs.db
-.DS_Store
-
-# Eclipse
-*.pydevproject
-.project
-.metadata
-bin/**
-tmp/**
-tmp/**/*
-*.tmp
-*.bak
-*.swp
-*(J~(B.nib
-local.properties
+# Eclipse project files
 .classpath
-.settings/
-.loadpath
+.project
 
-# CDT-specific
-.cproject
+# from OSX.gitignore
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
 
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# from Windows.gitignore
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
